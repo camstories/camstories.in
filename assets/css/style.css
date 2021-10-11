@@ -1,0 +1,1709 @@
+/*--------------------- Copyright (c) 2020 ----------------------- 
+[Master Stylesheet] 
+Project: Wedding
+Version: 1.0.0 
+Author: Kamleshyadav
+ ------------------------------------------------------------------- 
+[Table of contents] 
+	1. Global CSS Start
+	2. Comman CSS Start
+    3. Preloader CSS Start
+    4. Header CSS Start
+    5. Banner CSS Start
+    6. About CSS Start
+    7. Married CSS Start
+    8. Service CSS Start
+    9. Gallery CSS Start
+    10. Testimonial CSS Start
+    11. Counter CSS Start
+    12. Blog CSS Start
+    13. Contact CSS Start
+    14. Newsletter CSS Start
+    15. Footer CSS Start
+    16. Responsive CSS Start
+-------------------------------------------------------------------*/
+
+
+/********************************************************
+    1. Global CSS Start
+********************************************************/
+
+body {
+    color: var(--main-gray-version3);
+    background: var(--main-bg-color);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+a,
+a:hover,
+a:focus {
+    color: var(--main-blue-version1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--main-blue-version1);
+    font-weight: 500;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+
+/********************************************************
+    2. Comman CSS Start
+********************************************************/
+
+.wed_btn {
+    background: var(--main-green-version2);
+    color: var(--main-bg-color);
+    display: inline-block;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    height: 50px;
+    line-height: 46px;
+    text-align: center;
+    padding: 0 15px;
+    width: 170px;
+    margin-top: 10px;
+    z-index: 0;
+    font-weight: 400;
+    overflow: hidden;
+    position: relative;
+    display: inline-table;
+}
+
+.wed_btn:hover {
+    color: var(--main-green-version2);
+}
+
+.wed_btn.wed_white {
+    background: transparent;
+    border: 2px solid var(--main-bg-color);
+}
+
+.wed_btn:hover {
+    color: var(--main-green-version2);
+}
+
+.wed_btn span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--main-bg-color);
+    -webkit-transform: translateY(150%);
+    -moz-transform: translateY(150%);
+    -ms-transform: translateY(150%);
+    -o-transform: translateY(150%);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.wed_btn:hover span {
+    -webkit-transform: translateY(0) scale(2);
+    -moz-transform: translateY(0) scale(2);
+    -ms-transform: translateY(0) scale(2);
+    -o-transform: translateY(0) scale(2);
+    transform: translateY(0) scale(2);
+}
+
+.wed_btn span:nth-child(1) {
+    --n: 1;
+}
+
+.wed_btn span:nth-child(2) {
+    --n: 2;
+}
+
+.wed_btn span:nth-child(3) {
+    --n: 3;
+}
+
+.wed_btn span:nth-child(4) {
+    --n: 4;
+}
+
+.wed_heading {
+    color: var(--main-green-version3);
+    font-size: 42px;
+    font-weight: 700;
+    position: relative;
+    padding: 0;
+    margin: 0px 0 38px 0;
+    font-style: italic;
+    line-height: 50px;
+}
+
+#scroll {
+    background: var(--main-green-version2);
+    color: var(--main-bg-color);
+}
+
+.wed_bottom_shape {
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: url(../images/shape_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
+    height: 80px;
+}
+
+.wed_top_shape {
+    position: absolute;
+    top: -9px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: url(../images/shape_bg_bottom.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
+    height: 80px;
+}
+
+.wed_subHeading {
+    color: var(--main-green-version3);
+    font-size: 32px;
+    font-weight: 700;
+    position: relative;
+    padding: 0;
+    margin: 22px 0 0;
+    font-style: italic;
+}
+
+.wed_nav_button {
+    width: 100px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wed_nav_button>div {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.wed_nav_button>div.next {
+    text-align: right;
+}
+
+.wed_nav_button>div:before {
+    content: "";
+    background: var(--main-green-version3);
+    width: 18px;
+    height: 18px;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 3px;
+    margin: auto;
+    opacity: .3;
+}
+
+.wed_nav_button>div.next:before {
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.wed_nav_button>div svg {
+    width: 22px;
+    height: 20px;
+    fill: var(--main-green-version3);
+    position: relative;
+}
+
+.wed_nav_button>div:hover {
+    text-align: center;
+}
+
+.wed_nav_button>div:hover svg {
+    fill: var(--main-bg-color);
+}
+
+.wed_nav_button>div:hover:before {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+}
+
+.wed_nav_button>div:hover,
+.wed_nav_button>div,
+.wed_nav_button>div:hover:before,
+.wed_nav_button>div:before,
+.wed_nav_button>div:hover svg,
+.wed_nav_button>div svg {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.response {
+    position: unset;
+    margin: 0 0 10px;
+}
+
+.single_section {
+    width: 100%;
+    display: inline-block;
+}
+
+
+/********************************************************
+    3. Preloader CSS Start
+********************************************************/
+
+.preloader_active .preloader_holder {
+    background-color: var(--main-bg-color);
+}
+
+.preloader_active .preloader_holder .preloader span {
+    box-shadow: 0px 0px 0px 0px var(--main-wed-pink);
+}
+
+@-webkit-keyframes loadingCircles {
+    0% {
+        -webkit-transform: scale(0);
+        opacity: 1;
+        box-shadow: 0px 0px 0px 10px var(--main-wed-pink);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 0;
+        box-shadow: 0px 0px 0px 2px var(--main-wed-pink);
+    }
+}
+
+@-moz-keyframes loadingCircles {
+    0% {
+        -moz-transform: scale(0);
+        opacity: 1;
+        box-shadow: 0px 0px 0px 10px var(--main-wed-pink);
+    }
+    100% {
+        -moz-transform: scale(1);
+        opacity: 0;
+        box-shadow: 0px 0px 0px 2px var(--main-wed-pink);
+    }
+}
+
+@keyframes loadingCircles {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+        box-shadow: 0px 0px 0px 10px var(--main-wed-pink);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+        box-shadow: 0px 0px 0px 2px var(--main-wed-pink);
+    }
+}
+
+.preloader_open:before,
+.preloader_open:after {
+    background-color: var(--main-bg-color);
+}
+
+
+/********************************************************
+    4. Header CSS Start
+********************************************************/
+
+.wed_header_wrapper {
+    padding: 0;
+    background: var(--main-blue-version4);
+    position: unset;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+.searchBtn,
+.searchBtn:focus,
+.searchBtn:hover {
+    color: var(--main-green-version6);
+    padding-left: 10px;
+}
+
+.wed_search_wrap .display_flex {
+    align-items: center;
+}
+
+.wed_search_wrap .display_flex li {
+    display: flex;
+}
+
+.main_menu_wrapper ul>li>a {
+    font-weight: 500;
+    padding: 30px 20px;
+}
+
+.wed_logo {
+    position: relative;
+}
+
+.wed_logo a {
+    width: 290px;
+    display: inline-block;
+    height: 176px;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    background-image: url(../images/logo_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    text-align: center;
+    padding: 15px 0 0;
+    top: 0;
+}
+
+
+/********************************************************
+    5. Banner CSS Start
+********************************************************/
+
+.wed_banner_wrapper {
+    padding: 302px 0 310px;
+    position: relative;
+    background-color: var(--main-green-version4);
+    background-image: url(../images/wedding/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.wed_banner_text h6 {
+    color: var(--main-wed-pink);
+    font-size: 26px;
+    letter-spacing: 6px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.wed_banner_text h1 {
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 80px;
+    color: white;
+    font-style: italic;
+}
+
+
+/********************************************************
+    6. About CSS Start
+********************************************************/
+
+.wed_about_wrapper {
+    background: var(--main-bg-color);
+    padding: 80px 0 50px;
+}
+
+.wed_about_wrapper .row {
+    align-items: center;
+}
+
+.wed_about_img {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.wed_about_small_img {
+    border: 10px solid var(--main-green-version4);
+    margin-top: -215px;
+    float: right;
+    position: relative;
+    min-width: 64%;
+    max-width: 65%;
+}
+
+.wed_about_time {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    display: inline-block;
+    font-size: 42px;
+    position: absolute;
+    right: 36px;
+    top: 21px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-style: italic;
+    writing-mode: vertical-rl;
+    color: var(--main-blue-version5);
+    font-family: 'Yantramanav', sans-serif;
+}
+
+.wed_about_detail h3 {
+    color: var(--main-wed-pink);
+    font-size: 22px;
+    letter-spacing: 6px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.wed_about_detail {
+    font-size: 18px;
+    color: var(--main-black5);
+    display: inline-block;
+    width: 100%;
+}
+
+.wed_about_detail .wed_btn {
+    margin-top: 23px;
+}
+
+img.wed_about_big_img {
+    width: calc(100% - 100px);
+}
+
+
+/********************************************************
+    7. Married CSS Start
+********************************************************/
+
+.wed_married_wrapper {
+    background: var(--main-green-version4);
+    padding: 152px 0 113px;
+    position: relative;
+}
+
+.wed_married_wrapper .row {
+    align-items: center;
+}
+
+.wed_married_img .wed_heading {
+    margin: 0;
+}
+
+.wed_married_text {
+    position: relative;
+}
+
+.wed_married_text img {
+    width: 100%;
+}
+
+.wed_married_hover {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.60);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.wed_married_text:hover .wed_married_hover {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.wed_married_text,
+.wed_married_text:hover .wed_married_hover,
+.wed_married_text .wed_married_hover,
+.wed_married_hover {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+
+/********************************************************
+    8. Service CSS Start
+********************************************************/
+
+.wed_services_wrapper {
+    padding: 80px 0 72px;
+    background: var(--main-bg-color);
+    position: relative;
+}
+
+.wed_services_section {
+    background-color: var(--main-green-version7);
+    padding: 50px 20px 40px;
+    margin-bottom: 30px;
+    position: relative;
+    border: none;
+    border-radius: 6px;
+    overflow: hidden;
+    font-family: 'Yantramanav', sans-serif;
+    width: 100%;
+    min-height: 326px;
+    display: flex;
+    align-items: center;
+}
+
+.wed_services_section:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: var(--main-link-color);
+    opacity: .8;
+    visibility: hidden;
+}
+
+.wed_services_section:hover {
+    color: var(--main-bg-color);
+    background-image: url(https://via.placeholder.com/370x328);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.wed_services_section:hover:before {
+    visibility: visible;
+}
+
+.wed_services_section_inner {
+    position: relative;
+}
+
+.wed_services_section:hover .wed_icon_bg {
+    display: none;
+}
+
+.wed_icon_bg,
+.wed_service_border {
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+.wed_icon_bg svg {
+    height: 70px;
+    fill: var(--main-wed-pink);
+    width: 70px;
+}
+
+.wed_service_border svg {
+    width: 60px;
+    height: 20px;
+    fill: var(--main-green-version3);
+}
+
+.wed_services_section:hover .wed_subHeading {
+    color: var(--main-bg-color);
+}
+
+.wed_services_section:hover .wed_subHeading {
+    margin-top: 0;
+}
+
+.wed_services_section:hover .wed_service_border svg {
+    fill: var(--main-bg-color);
+}
+
+.wed_services_section:hover,
+.wed_services_section,
+.wed_services_section:hover .wed_service_border svg,
+.wed_service_border svg,
+.wed_services_section:hover .wed_subHeading,
+.wed_services_section .wed_subHeading,
+.wed_services_section:hover:before {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.bullets {
+    text-align: center;
+    margin-top: 6px;
+}
+
+.bullets .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    background: transparent;
+    border: 1px solid transparent;
+    position: relative;
+    opacity: 1;
+}
+
+.bullets .swiper-pagination-bullet:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border: none;
+    border-radius: 50%;
+    background: var(--main-green-version8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.wed_services_wrapper .wedingService.swiper-container .bullets .swiper-pagination-bullet {
+    margin: 0;
+}
+
+.bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    border-color: var(--main-green-version8);
+}
+
+
+/********************************************************
+    9. Gallery CSS Start
+********************************************************/
+
+.wed_gallery_wrapper {
+    padding: 152px 0 144px;
+    background: var(--main-wed-pink-bg);
+    position: relative;
+}
+
+.wed_gallery_section a {
+    position: relative;
+    display: inline-block;
+}
+
+.wed_gallery_section a:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+}
+
+.wed_gallery_section a:hover:after {
+    opacity: 1;
+    ;
+}
+
+.wed_gallery_section img,
+.wed_gallery_section,
+.wed_gallery_section a {
+    width: 100%;
+}
+
+.wed_gallery_section a:after,
+.wed_gallery_section a:hover:after {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.wed_gallery_wrapper .wedingService.swiper-container .bullets .swiper-pagination-bullet {
+    margin: 0;
+}
+
+
+/********************************************************
+    10. Testimonial CSS Start
+********************************************************/
+
+.wed_testimonial_wrapper {
+    width: 100%;
+    display: inline-block;
+    background: var(--main-bg-color);
+    position: relative;
+    padding: 80px 0 1px;
+}
+
+.wed_testimonial_wrapper .wed_heading {
+    margin: 0px 0 20px 0;
+}
+
+.wed_testimonial_section {
+    padding: 0 55px 35px;
+    margin-bottom: 35px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--main-link-color);
+    font-weight: 600;
+    font-style: italic;
+}
+
+.wed_testimonials_section .wed_nav_button {
+    width: 60%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    top: 104px;
+}
+
+.wed_testimonial_img {
+    width: 250px;
+    height: 250px;
+    border: none;
+    border-radius: 50%;
+    background: url(../images/testimonial_img_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    position: relative;
+    line-height: 250px;
+}
+
+.wed_testimonial_img img {
+    width: 170px;
+    height: 170px;
+    border: 5px solid var(--main-bg-color);
+    border-radius: 50%;
+}
+
+.wed_testimonial_img:before {
+    content: url(../images/testimonial_flower.png);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.wed_testimonials_quote {
+    width: 46%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wed_testimonial_border {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.wed_testimonial_border svg {
+    fill: var(--main-green-version3);
+    height: 20px;
+    width: 100px;
+}
+
+.wed_quote1_img {
+    margin-top: -46px;
+}
+
+.wed_quote2_img {
+    margin-top: 46px;
+}
+
+.wed_testimonials_quote>img {
+    opacity: .40;
+}
+
+.wed_testimonial_wrapper .wed_subHeading {
+    margin-top: 16px;
+}
+
+.wed_testimonial_section {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+
+/********************************************************
+    11. Counter CSS Start
+********************************************************/
+
+.wed_counter_wrapper {
+    width: 100%;
+    display: inline-block;
+    background: var(--main-green-version4);
+    padding: 124px 0 87px;
+    position: relative;
+}
+
+.wed_counter_icon {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 26px;
+}
+
+.wed_counter_icon img {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.wed_counter_icon h1 {
+    color: var(--main-green-version2);
+    font-size: 56px;
+    line-height: 100px;
+    position: relative;
+    z-index: 1;
+    font-weight: 900;
+}
+
+.counter_item {
+    font-size: 22px;
+    color: var(--main-green-version3);
+    font-family: 'Yantramanav', sans-serif;
+}
+
+
+/********************************************************
+    12. Blog CSS Start
+********************************************************/
+
+.wed_blog_wrapper {
+    padding: 72px 0 72px;
+}
+
+.wed_blog_img {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.wed_blog_img img {
+    width: 100%;
+}
+
+.wed_blog_info li {
+    display: inline-block;
+    margin-left: 14px;
+}
+
+.wed_blog_info li:first-child {
+    margin-left: 0;
+}
+
+.blog_text {
+    padding: 25px 0 0;
+}
+
+.wed_blog_info {
+    margin-bottom: 11px;
+}
+
+.wed_blog_info li img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.wed_blog_info a {
+    color: var(--main-green-version3);
+    font-family: 'Yantramanav', sans-serif;
+}
+
+.wed_blog_title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--main-green-version3);
+    font-style: italic;
+}
+
+.wed_blog_title:hover {
+    color: var(--main-green-version2);
+}
+
+.wed_blog_thumb {
+    background: var(--main-bg-color);
+    margin-bottom: 28px;
+}
+
+.wed_blog_title,
+.wed_blog_title:hover {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.wed_blog_wrapper .swiper-container .bullets .swiper-pagination-bullet {
+    margin: 0;
+}
+
+
+/********************************************************
+    13. Contact CSS Start
+********************************************************/
+
+.wed_contact_Wrapper {
+    padding: 150px 0 112px;
+    background: var(--main-wed-pink-bg);
+    position: relative;
+}
+
+.wed_contact_Wrapper .wed_subHeading {
+    margin: 0 0 21px;
+}
+
+.wed_contact_Wrapper .wed_btn {
+    margin-top: 0;
+}
+
+.wed_form_field {
+    border: none;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 30px;
+    padding: 0 30px;
+    background: var(--main-pink-version1);
+    font-weight: 700;
+    font-style: italic;
+    border-radius: 40px;
+    color: var(--main-pink-version2);
+}
+
+textarea.wed_form_field {
+    height: 290px;
+    padding: 22px 30px;
+    resize: none;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.wed_form_field::placeholder,
+.wed_form_field::-webkit-input-placeholder {
+    color: var(--main-pink-version2);
+}
+
+.wed_form_field:-moz-placeholder,
+.wed_form_field:-ms-input-placeholder {
+    color: var(--main-pink-version2);
+}
+
+.wed_contact_info_wrapper ul li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.wed_contact_info_wrapper ul li:last-child {
+    margin-bottom: 0;
+}
+
+.wed_contact_info_icon {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    line-height: 56px;
+    border: 6px solid var(--main-pink-version3);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.wed_contact_info_icon svg {
+    height: 20px;
+    width: 20px;
+    fill: var(--main-green-version3);
+}
+
+.wed_contact_info_wrapper ul li .wed_contact_info_text {
+    font-size: 24px;
+    position: relative;
+    font-style: italic;
+    display: inline-block;
+    width: calc(100% - 70px);
+    padding: 0 0 0 20px;
+}
+
+.wed_contact_info_wrapper ul li .wed_contact_info_text a {
+    color: var(--main-green-version3);
+    font-size: 24px;
+    font-weight: 700;
+    position: relative;
+    padding: 0;
+    font-style: italic;
+    display: inline-block;
+    width: 100%;
+    line-height: 30px;
+}
+
+.wed_contact_info_wrapper,
+textarea.wed_form_field,
+.wed_contact_Wrapper .wed_btn {
+    margin-bottom: 30px;
+}
+
+
+/********************************************************
+    14. Newsletter CSS Start
+********************************************************/
+
+.wed_newsletter_wrapper {
+    padding: 80px 0 0;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    background: var(--main-bg-color);
+}
+
+.wed_newsletter_heading h1 {
+    color: var(--main-green-version3);
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.wed_subscribe_holder {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.wed_subscribe_holder input {
+    border: none;
+    height: 60px;
+    padding: 0 200px 0 30px;
+    width: 100%;
+    line-height: 60px;
+    background: var(--main-green-version4);
+    color: var(--main-green-version2);
+    border-radius: 40px;
+    font-style: italic;
+}
+
+.wed_subscribe_holder input::placeholder {
+    color: var(--main-green-version2);
+    opacity: .6;
+}
+
+.wed_subscribe_holder .wed_btn {
+    margin: 0;
+    position: absolute;
+    right: 5px;
+    height: auto;
+    top: 5px;
+    bottom: 5px;
+}
+
+.wed_contact_info_wrapper ul li:hover .wed_contact_info_icon {
+    background: var(--main-green-version3);
+    border-color: var(--main-green-version3);
+}
+
+.wed_contact_info_wrapper ul li:hover .wed_contact_info_icon svg {
+    fill: var(--main-bg-color);
+}
+
+.wed_contact_info_wrapper ul li:hover .wed_contact_info_icon,
+.wed_contact_info_wrapper ul li .wed_contact_info_icon {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+
+/********************************************************
+    15. Footer CSS Start
+********************************************************/
+
+.wed_footer_main_wrapper {
+    padding: 48px 0 0;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+
+.wed_footer_main_wrapper .wed_subHeading {
+    margin-top: 20px;
+}
+
+.wed_copyright_wrapper {
+    padding: 17px 0 14px;
+    color: var(--main-bg-color);
+    position: relative;
+    margin-top: 71px;
+    background: var(--main-brown-version1);
+    font-family: 'Yantramanav', sans-serif;
+}
+
+
+/********************************************************
+	23. Blog Single Page Start
+*******************************************************/
+
+.blogPage_wrapper.blogPageSingleWrapper {
+    padding: 80px 0 21px;
+}
+
+.blogPageBlockquote {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.blogPageBlockquote_img {
+    width: 160px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.blogBlockquoteQuate {
+    width: calc(100% - 170px);
+    color: var(--main-link-color);
+    position: relative;
+    text-align: center;
+}
+
+.blogBlockquoteQuate p,
+.blogQuateUser {
+    text-align: left;
+}
+
+.blogPageBlockquote_img img.blogQuateUser {
+    border: 3px solid var(--main-green-version2);
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+}
+
+.blogPageBlockquote_img:before {
+    content: "\f10e";
+    right: 12px;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    color: var(--main-green-version2);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    line-height: 32px;
+    background: var(--main-bg-color);
+    border: 5px solid var(--main-green-version2);
+    padding-left: 8px;
+    border-radius: 100%;
+}
+
+.blogQuateUser {
+    color: var(--main-link-color);
+    font-weight: 700;
+    font-size: 20px;
+    width: 100%;
+    display: inline-block;
+}
+
+.blogQuateUser>span {
+    color: var(--main-txt-color);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.blogBlockquoteQuate:before {
+    content: "\f10e";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    color: var(--main-green-version2);
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 2%;
+    margin: auto;
+}
+
+.blogBlockquoteQuate:before {
+    content: "\f10e";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    color: var(--main-green-version2);
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 84px;
+    margin: auto;
+    top: 50%;
+    opacity: .1;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.blogImgTextContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.blogImgTextContainer img {
+    width: 370px;
+    display: inline-block;
+    margin: 6px 15px 6px 0;
+}
+
+.blogImgTextContainer p {
+    display: inline-block;
+    width: calc(100% - 385px);
+}
+
+.blogAuthoreMessageBox {
+    background: var(--main-green-version2);
+    border: none;
+    border-radius: 0;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 74px 0 73px;
+    color: var(--main-bg-color);
+}
+
+.blogAuthoreContent h5 {
+    color: var(--main-bg-color);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.blogAuthoreContent h5 span {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.blogAuthoreContent {
+    width: calc(100% - 140px);
+}
+
+.blogAuthoreImg {
+    width: 110px;
+    height: 110px;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.blogAuthoreImg img {
+    width: 110px;
+    height: 110px;
+    border: none;
+    border-radius: 100%;
+    object-fit: fill;
+}
+
+.blogCommentHolder {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.blogCmntDetail {
+    width: calc(100% - 130px);
+}
+
+.blogCmntUser {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.blogCmntUser img {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 100%;
+    object-fit: fill;
+}
+
+.blogCommnets>ul>li {
+    margin-bottom: 26px;
+    display: inline-block;
+}
+
+.blogCommnets ul li ul {
+    padding-left: 80px;
+}
+
+.blogCommnets>ul>li>ul>li {
+    margin-top: 26px;
+}
+
+.blogPageCommentForm {
+    margin-top: 43px;
+}
+
+.blogInputFieldInner {
+    width: 100%;
+    border: 1px solid var(--main-border-color);
+    padding: 0 20px;
+    height: 50px;
+    border-radius: 0;
+    display: flex;
+}
+
+textarea.blogInputFieldInner {
+    height: 150px;
+    resize: none;
+    padding: 12px 20px;
+}
+
+.blogInputField {
+    margin-bottom: 30px;
+}
+
+.blogPageCommentForm .blogSectionHeading {
+    margin-bottom: 40px;
+}
+
+.blogPageCommentForm .theme_btn {
+    margin: 0;
+}
+
+.blogCmntReply {
+    color: var(--main-green-version2);
+    margin-left: 15px;
+}
+
+.blogCmntReply svg {
+    width: 16px;
+    fill: var(--main-green-version2);
+}
+
+.blogDivider {
+    margin: 22px 0;
+    display: block;
+}
+
+a.pnt_btn.blogBtn {
+    background: var(--main-green-version2);
+    color: var(--main-bg-color);
+}
+
+.blogPaginationWrapper {
+    text-align: center;
+}
+
+.blogSectionHeading {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 26px;
+}
+
+.wed_copyright_wrapper a.white:hover {
+    color: var(--main-bg-color);
+}
+
+
+/********************************************************
+	16. Responsive CSS Start
+********************************************************/
+
+@media (min-width: 991.98px) {
+    ul.sub_menu {
+        background: var(--main-blue-version4);
+        top: 80px;
+    }
+    .main_menu_wrapper ul>li ul.sub_menu li a {
+        padding: 15px 20px 0;
+    }
+    header.fixed_header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 99;
+        box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.085);
+        padding: 0;
+    }
+}
+
+@media (min-width: 1699.98px) {
+    .wed_header_wrapper .container-fluid,
+    .wed_banner_wrapper .container-fluid {
+        max-width: 1626px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wed_married_img {
+        padding-left: 100px;
+    }
+    .wed_heading_wrpper {
+        width: 36%;
+        margin: auto;
+    }
+    .wed_married_img .wed_heading_wrpper {
+        width: 100%;
+    }
+    .wed_newsletter_wrapper .wed_heading_wrpper {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .wed_about_wrapper {
+        padding: 75px 0 50px;
+    }
+    .wed_married_wrapper {
+        padding: 140px 0 100px;
+    }
+    .wed_contact_Wrapper {
+        padding: 152px 0 122px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .main_menu_wrapper li.has_submenu:before,
+    .main_menu_wrapper li.has_submenu:after {
+        background: var(--main-wed-pink);
+    }
+    .main_menu_wrapper ul>li>a {
+        padding: 15px 20px 0px;
+    }
+    .wed_subHeading {
+        font-size: 22px;
+    }
+    .wed_testimonials_section .wed_nav_button {
+        width: 96%;
+    }
+    .wed_testimonials_quote {
+        width: 85%;
+    }
+    .menu_btn {
+        padding: 18px 0 16px 0;
+    }
+    .wed_banner_wrapper {
+        padding: 202px 0 210px;
+        background-position: left;
+    }
+    .wed_about_wrapper {
+        padding: 80px 0 50px;
+    }
+    .wed_married_wrapper {
+        padding: 152px 0 116px;
+    }
+    .wed_services_wrapper {
+        padding: 80px 0 74px;
+    }
+    .wed_gallery_wrapper {
+        padding: 152px 0 146px;
+    }
+    .wed_testimonial_wrapper {
+        padding: 80px 0 4px;
+    }
+    .wed_counter_wrapper {
+        padding: 124px 0 90px;
+    }
+    .wed_blog_wrapper {
+        padding: 74px 0 74px;
+    }
+    .wed_copyright_wrapper {
+        margin-top: 74px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .wed_about_time {
+        -webkit-transform: unset;
+        -moz-transform: unset;
+        -ms-transform: unset;
+        -o-transform: unset;
+        transform: unset;
+        font-size: 32px;
+        position: unset;
+        writing-mode: unset;
+        margin-top: 30px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .wed_heading {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .wed_logo a {
+        width: 160px;
+        height: 100px;
+    }
+    .wed_logo img {
+        height: 45px;
+    }
+    .wed_banner_wrapper {
+        padding: 162px 0 170px;
+    }
+    .wed_banner_text h1 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+    .wed_bottom_shape,
+    .wed_top_shape {
+        height: 48px;
+    }
+    .wed_testimonials_quote {
+        width: 100%;
+    }
+    .wed_testimonial_section {
+        padding: 0 15px 35px;
+    }
+    .wed_about_time {
+        -webkit-transform: unset;
+        -moz-transform: unset;
+        -ms-transform: unset;
+        -o-transform: unset;
+        transform: unset;
+        font-size: 32px;
+        position: unset;
+        writing-mode: unset;
+        margin-top: 30px;
+    }
+    .menu_btn {
+        padding: 12px 0 0;
+    }
+    .wed_married_wrapper {
+        padding: 117px 0 82px;
+    }
+    .wed_services_wrapper {
+        padding: 80px 0 74px;
+    }
+    .wed_gallery_wrapper {
+        padding: 117px 0 111px;
+    }
+    .wed_testimonial_wrapper {
+        padding: 80px 0 7px;
+    }
+    .wed_counter_wrapper {
+        padding: 124px 0 90px;
+    }
+    .wed_blog_wrapper {
+        padding: 74px 0 74px;
+    }
+    .wed_contact_Wrapper {
+        padding: 117px 0 70px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .wed_testimonials_section .wed_nav_button {
+        top: unset;
+        bottom: 0;
+    }
+    .wed_quote1_img,
+    .wed_quote2_img {
+        display: none;
+    }
+    .wed_testimonials_quote {
+        justify-content: center;
+    }
+    .wed_contact_form form .row {
+        flex-direction: column-reverse;
+    }
+    .wed_contact_info_wrapper ul li .wed_contact_info_text a {
+        font-size: 18px;
+    }
+    .wed_subscribe_holder .wed_btn {
+        margin: 15px auto 0;
+        position: unset;
+    }
+    .wed_subscribe_holder input {
+        height: 50px;
+        line-height: 50px;
+        padding: 0 30px;
+    }
+    .wed_about_small_img {
+        min-width: 100%;
+        max-width: 10%;
+        margin: 0;
+    }
+    img.wed_about_big_img {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .menu_btn {
+        padding: 13px 0 0;
+    }
+    .wed_bottom_shape {
+        bottom: -10px;
+    }
+    .wed_top_shape {
+        top: -11px;
+    }
+    .wed_banner_wrapper {
+        padding: 132px 0 140px;
+        text-align: center;
+    }
+    .wed_about_wrapper {
+        padding: 78px 0 47px;
+    }
+    .wed_married_wrapper {
+        padding: 106px 0 70px;
+    }
+    .wed_services_wrapper {
+        padding: 78px 0 72px;
+    }
+    .wed_gallery_wrapper {
+        padding: 108px 0 101px;
+    }
+    .wed_testimonial_wrapper {
+        padding: 78px 0 68px;
+    }
+    .wed_counter_wrapper {
+        padding: 107px 0 73px;
+    }
+    .wed_blog_wrapper {
+        padding: 72px 0 72px;
+    }
+    .wed_contact_Wrapper {
+        padding: 108px 0 80px;
+    }
+    .wed_newsletter_wrapper {
+        padding: 78px 0 0;
+    }
+}
