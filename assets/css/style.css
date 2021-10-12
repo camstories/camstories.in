@@ -389,7 +389,7 @@ h6 {
     padding: 302px 0 310px;
     position: relative;
     background-color: var(--main-green-version4);
-    background-image: url(../images/wedding/bg.jpg);
+    background-image: url(https://i.imgur.com/Xvu2svt.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -407,7 +407,7 @@ h6 {
     font-size: 62px;
     font-weight: 700;
     line-height: 80px;
-    color: white;
+    color: WHITE;
     font-style: italic;
 }
 
@@ -1044,6 +1044,7 @@ textarea.wed_form_field {
 
 .wed_contact_info_wrapper ul li .wed_contact_info_text {
     font-size: 24px;
+    font-family: ;
     position: relative;
     font-style: italic;
     display: inline-block;
